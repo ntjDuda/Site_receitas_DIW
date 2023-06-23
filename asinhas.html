@@ -1,0 +1,84 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Asinhas de frango ao barbecue</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Asinhas de frango ao barbecue
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/assinha.jpg" alt="assinha">
+                <h2>Asinhas de frango ao barbecue</h2>
+                <p class="produtoParagrafo">Tempere os pedaços de frango com sal e pimenta. <br>
+                    Unte uma assadeira com óleo e os espalhe sobre ela.
+                    Tente não deixar <br> as asas sobrepostas; se precisar, coloque em duas assadeiras.
+                    Asse em <br> forno médio por 45 minutos, virando o frango na metade do tempo, para dourar dos dois
+                    lados.
+                    Enquanto as asas assam, prepare o molho barbecue.
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    1 kg de meio das asas, 1 colher (chá) de sal <br>
+                    1 colher (chá) de pimenta-do-reino</p>
+                    <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+            </div>
+
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

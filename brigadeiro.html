@@ -1,0 +1,62 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brigadeiro</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Brigadeiro
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/brigadeiro.jpg" alt="Brigadeiro">
+                <h2>Brigadeiro</h2>
+                <p class="produtoParagrafo">
+                    Em uma panela, coloque o Leite MOÇA com o Chocolate em Pó DOIS FRADES e a manteiga. <br>
+                    Misture bem e leve ao fogo baixo, mexendo sempre até desprender do fundo da panela 
+                    (cerca de 10 minutos).<br>
+                    Retire do fogo, passe para um prato untado com manteiga e deixe esfriar. <br>
+                    Com as mãos untadas, enrole em bolinhas e passe-as no granulado. <br> 
+                    Sirva em forminhas de papel.
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    1 Leite MOÇA® (lata ou caixinha) <br>
+                    3 colheres (sopa) de Chocolate em Pó NESTLÉ DOIS FRADES<br>
+                    1 colher (sopa) de manteiga<br>
+                    1 xícara (chá) de chocolate granulado
+                </p>
+            </div>
+
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

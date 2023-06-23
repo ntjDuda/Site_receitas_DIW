@@ -1,0 +1,207 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700&display=swap');
+
+:root {
+    --black: #000;
+    --gray: #777;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #fff;
+    color: var(--black);
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+.container {
+    display: grid;
+    justify-content: center;
+}
+
+
+.navbar {
+    padding: 40px;
+}
+
+.navbar-brand img {
+    width: 100px;
+    height: 90px;
+    margin: 0px 62px -7px 120px;
+}
+
+.nav-item {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.nav-link {
+    color: var(--black);
+    padding-right: 30px;
+}
+
+.nav-link:hover {
+    color: var(--gray);
+}
+
+.nav-link.active {
+    font-weight: bold;
+}
+
+
+.header {
+    margin: 0 160px;
+}
+
+.header-content {
+    background-color: #FBDFDB;
+    border-radius: 30px;
+    width: 940px;
+    height: 366px;
+    padding: 117px 60px;
+    position: relative;
+}
+
+.header-content h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.header-content p {
+    font-size: 18px;
+    line-height: 28px;
+    opacity: .7;
+}
+
+.header-content img {
+    width: 216px;
+    height: 300px;
+    right: 100px;
+    top: 66px;
+    position: absolute;
+}
+
+.main-content {
+    margin: 50px 160px;
+}
+
+.main-content h2,
+.modal-content h2 {
+    font-size: 24px;
+}
+
+.recipes {
+    margin: 20px 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+}
+
+.recipe .recipe-img img {
+    width: 300px;
+    height: 140px;
+    border-radius: 15px;
+}
+
+.recipe .recipe-info .recipe-title {
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.recipe .recipe-info .recipe-author {
+    font-size: 14px;
+    color: var(--gray);
+}
+
+button {
+    display: inline-block;  
+    padding: 10px;
+    border-radius: 50px;
+    background-color: #fad69f;
+    color: #000000;
+    font-size: 18px;
+    text-align: center;
+    text-decoration: none;
+}
+
+button:hover {
+    background-color: #f1c448;
+    cursor: pointer;
+}
+
+.about:not(:nth-child(1)) {
+    margin-top: 30px;
+}
+
+.about .lead {
+    margin-top: 20px;
+    font-size: 18px;
+    line-height: 28px;
+    color: #444;
+}
+
+button a{
+    color: #000;
+}
+
+
+#footer {
+    background-color: #eee;
+    padding: 20px;
+}
+
+#footer p {
+    font-size: 14px;
+    color: #999;
+}
+
+
+.modal-overlay {
+    background-color: rgba(0, 0, 0, .7);
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.modal {
+    background-color: white;
+    border-radius: 16px;
+    width: 650px;
+    height: 413px;
+    margin: 355px auto;
+    text-align: center;
+}
+
+.modal-content img {
+    width: 600px;
+    height: 200px;
+    border-radius: 15px;
+    margin: 30px;
+}
+
+.modal-content p {
+    font-size: 18px;
+    color: var(--gray);
+}
+
+.modal .close-modal {
+    color: #999;
+    margin-top: 60px;
+    cursor: pointer;
+}
+
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}

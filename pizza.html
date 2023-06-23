@@ -1,0 +1,96 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Macarrão com requeijão</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Macarrão com requeijão
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/Macarrão com requeijão.jpg" alt="Macarrão com requeijão">
+                <h2>Macarrão com requeijão</h2>
+                <p class="produtoParagrafo">
+                    Em uma panela aqueça o azeite e doure o alho. <br>
+                    Junte o molho de tomate, o requeijão e o creme de leite.<br>
+                    Tempere com sal e pimenta.<br>
+                    Deixe no fogo brando até o requeijão derreter.<br>
+                    Desligue o fogo e misture a mussarela e o presunto picados.<br>
+                    Em um refratário coloque o macarrão, despeje o molho e polvilhe o queijo ralado.<br>
+                    Deixe por 20 minutos em forno pré-aquecido.<br>
+                    Sirva em seguida.
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    500 g de penne cozido al dente <br>
+                    2 dentes de alho picados <br>
+                    200 g de requeijão de sua preferência<br>
+                    300 g de presunto picado <br>
+                    Queijo parmesão ralado <br>
+                    2 colheres (sopa) de azeite <br>
+                    1 lata de molho de tomate <br>
+                    1 lata de creme de leite <br>
+                    300g de mussarela picada <br>
+                    sal e pimenta a gosto
+                    <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+                </p>
+            </div>
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+          
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

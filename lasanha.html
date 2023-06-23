@@ -1,0 +1,97 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lasanha</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Lasanha
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/lasanha.png" alt="Lasanha">
+                <h2>Lasanha</h2>
+                <p class="produtoParagrafo">
+                    Cozinhe a massa segundo as orientações do fabricante, despeje em um refratário com <br> 
+                    água gelada para não grudar e reserve. Refogue o alho, a cebola, a carne moída, o molho de <br>
+                    de tomate, deixe cozinhar por 3 minutos e reserve. Derreta a margarina, coloque as 3 <br> 
+                    colheres de farinha de trigo e mexa. Despeje o leite aos poucos e continue mexendo. <br>
+                    Por último, coloque o creme de leite, mexa por 1 minuto e desligue o fogo
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    500 g de massa de lasanha carne moída <br>
+                    500 g de carne moída <br>
+                    2 caixas de creme de leite <br>
+                    3 colheres de manteiga<br>
+                    3 colheres de farinha de trigo<br>
+                    500 g de presunto<br>
+                    500 g de mussarela <br>
+                    sal a gosto<br>
+                    2 copos de leite <br>
+                    1 cebola ralada <br>
+                    3 colheres de óleo <br>
+                    1 caixa de molho de tomate <br>
+                    3 dentes de alho amassados <br>
+                    1 pacote de queijo ralado <br>
+                    <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+                </p>
+            </div>
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+          
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

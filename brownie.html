@@ -1,0 +1,93 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brownie</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Brownie
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/brownie.jpg" alt="Brownie">
+                <h2>Brownie</h2>
+                <p class="produtoParagrafo">
+                    Em uma tigela grande, bata os ovos com o açúcar até ficar tudo bem incorporado. <br>
+                    Adicione o extrato de baunilha e o óleo e misture bem mais uma vez. <br>
+                    Junte a farinha, o chocolate em pó e a pitada de sal passando por uma <br>
+                    peneira, para evitar o grumos na massa e misture delicadamente só até formar uma mistura homogênea. <br>
+                    Despeje em uma forma untada com óleo e chocolate em pó e leve para assar em forno pré- <br>
+                    aquecido 200 graus de 20 a 30 minutos – é super importante que o brownie não asse demais <br>
+                    já que a textura ideal dele é bem úmido e denso. Então, faça o teste do palito: ele deve sair <br>
+                    com pedacinhos da massa (só pedacinhos, nada de massa crua e molhada, tá?). 
+
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    2 xícaras de chá de açúcar<br>
+                    4 ovos<br>
+                    1/2 xícara de chá de óleo<br>
+                    1 e 1/2 xícara de chá de chocolate em pó<br>
+                    1 xícara de chá de farinha de trigo<br>
+                    1 colher de chá de extrato de baunilha (opcional) <br>
+                </p>
+                <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+            </div>
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+          
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

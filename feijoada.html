@@ -1,0 +1,87 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feijoada</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Feijoada
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/feijoadaFoto.jpg" alt="Feijoada">
+                <h2>Feijoada</h2>
+                <p class="produtoParagrafo">
+                    Comece o preparo da feijoada no dia anterior para dessalgar as carnes. Descarte  <br> 
+                    o excesso de gordura das peças. Corte o lombo e a carne-seca em cubos médios de <br> 
+                    cerca de 3 cm. Apoie a peça de costelinha na tábua e corte a carne entre os <br> 
+                    ossinhos para separar as ripas. Coloque cada tipo de carne numa tigela <br> 
+                    grande, cubra com bastante água e leve à geladeira. Deixe de molho por 24 horas <br> 
+                    para dessalgar, trocando a água a cada 3 horas, de preferência.
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    1,1 kg de costela de porco salgada (1 peça com 12 ripas) <br>
+                    800 g de carne-seca <br>
+                    600 g de lombo de porco salgado <br>
+                    <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+                </p>
+            </div>
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+          
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

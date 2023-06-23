@@ -1,0 +1,93 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filé a parmegiana</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Filé a parmegiana
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/fileParmegiana.jpg" alt="Filé a parmegiana">
+                <h2>Filé a parmegiana</h2>
+                <p class="produtoParagrafo">
+                    Corte o filé em bifes não muito finos (por favor não bata) e tempere-os a gosto. <br>
+                    Passe os bifes na farinha de trigo.<br>
+                    Bata ligeiramente os ovos (dois ou mais) com uma pitadinha de sal e passe <br> 
+                    os bifes nessa mistura. Passe os bifes na farinha de rosca.<br>
+                    Faça com que a massa fique bem aderida aos bifes.<br>
+                    Frite os bifes, deixe-os em papel toalha para que sequem bem <br>
+                    e coloque-os em uma forma refratária.
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    10 bifes filé mignon <br>
+                    2 ovos <br>
+                    farinha de rosca <br>
+                    1 pitadinha de açúcar <br>
+                    1 xícara de farinha de trigo <br>
+                    1 pitada de sal <br>
+                    1 lata de extrato de tomate <br>
+                    10 fatias de mussarela <br>
+                </p>
+                <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+            </div>
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+          
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>

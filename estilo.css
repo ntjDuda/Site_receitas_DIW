@@ -1,0 +1,299 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.header {
+  text-align: center;
+  font-family: "Alfa Slab One", cursive;
+  background-color: #ffdfc1;
+}
+
+.headerDivPerfil {
+  padding-top: 1rem;
+}
+
+.headerFotoPerfil {
+    background-color: #fff;
+  border-radius: 50%;
+}
+
+.headerDivTitulo {
+  padding: 1.5rem;
+}
+
+.headerTitulo {
+  font-size: 2rem;
+}
+
+.headerNavLinks {
+  padding: 2.5rem;
+}
+
+.headerLinks {
+  padding: 0.5rem;
+  border: 3px solid black;
+  border-radius: 10px;
+}
+
+.headerLinks:nth-child(2) {
+  margin-left: 2rem;
+}
+
+.headerLinks:hover {
+  text-decoration: underline;
+  color: rgba(0, 0, 0, 0.665);
+  border-color: rgba(0, 0, 0, 0.665);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+main {
+  background-color: #fff;
+  padding-bottom: 0.5rem;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.produto {
+  width: 75%;
+  text-align: center;
+  border: 8px solid black;
+  border-style: double;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.produtoImagem {
+  width: 100%;
+  height: 40vh;
+  object-fit: cover;
+}
+
+.produto h2 {
+  font-family: "Alfa Slab One", cursive;
+  font-size: 1.5rem;
+  padding: 1rem;
+}
+
+.produto p {
+  font-family: "Eczar", serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.1rem;
+  line-height: 1.5rem;
+}
+
+.produtoParagrafo {
+  padding-bottom: 0.7rem;
+}
+
+.paragrafo-preço {
+  font-weight: bold;
+}
+
+footer {
+  background: #ffebd5;
+  padding-bottom: 1rem;
+}
+
+#fazerPedido {
+  position: fixed;
+  top: 18rem;
+  left: 1rem;
+  writing-mode: vertical-rl;
+}
+
+.fazerPedido {
+  margin-top: 1rem;
+  text-align: center;
+  font-family: "Eczar", serif;
+  font-size: 1.5rem;
+}
+
+.linkFazerPedido {
+  border: 2px solid black;
+  padding: 0.5rem 0;
+  border-radius: 15px;
+  background-color: white;
+}
+
+.fa-whatsapp {
+  color: green;
+}
+
+#back-to-top {
+  position: fixed;
+  bottom: 50px;
+  right: 1rem;
+}
+
+.botaoVoltar {
+  background-color: white;
+  font-family: "Eczar", serif;
+  font-size: 2rem;
+  border-radius: 15px;
+}
+
+footer {
+  height: 15vh;
+  background-color: black;
+  margin-bottom: -1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: "Eczar", serif;
+}
+
+.fa-instagram {
+  border: 1px solid white;
+  border-radius: 50%;
+  padding: 0.4rem;
+  font-size: 1.5rem;
+  color: black;
+  background-color: white;
+}
+
+.sociais-links {
+  color: white;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+}
+
+.footer-nome {
+  color: white;
+  font-family: "Eczar", serif;
+  padding-top: 1rem;
+  font-size: 2rem;
+}

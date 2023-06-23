@@ -1,0 +1,97 @@
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pudim</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+    </style>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Eczar&display=swap');
+    </style>
+    <link rel="stylesheet" href="estilo.css">
+
+</head>
+
+<body>
+
+    <header class="header">
+
+        <div class="headerDivTitulo">
+            <h1 class="headerTitulo">
+                Pudim
+            </h1>
+        </div>
+    </header>
+    <main>
+        <section class="container">
+            <div class="produto">
+                <img class="produtoImagem" src="img/pudim.jpg" alt="Pudim">
+                <h2>Pudim</h2>
+                <p class="produtoParagrafo">
+                    Numa forma para pudim, de 20 centímetros de diâmetro, coloque 6 colheres de sopa <br>
+                    de açúcar e leve ao fogo médio até virar uma calda caramelada, por mais ou menos 3 minutos. <br>
+                    Retire do fogo e vá virando a fôrma, de modo que a calda forre todo o fundo e lateral da mesma. <br>
+                    Reserve.
+                    Num liquidificador coloque uma lata de leite condensado, <br> uma lata de leite, a mesma medida da
+                    lata
+                    de leite <br> condensado, e 3 ovos e bata bem por mais ou menos 1 minuto.
+                    Desligue <br> o liquidificador e deixe a mistura descansar por 15 minutos.<br>
+                    Com esta espera a espuma fica sobre a superfície, <br>o pudim fica sem furinhos, mas macio.
+                    Com a ajuda <br>de uma colher segure a espuma que está na superfície <br>e despeje o conteúdo do
+                    liquidificador, com cuidado, <br>na fôrma caramelada reservada acima <br>e leve ao forno médio, em
+                    banho-maria, a 180 graus Celsius por <br>uma hora e meia.
+                    Retire do forno, deixe esfriar e leve à geladeira por <br>mais ou menos duas horas. Desenforme e
+                    sirva
+                    em seguida.
+                </p>
+                <h2>Ingredientes:</h2>
+                <p class="produtoParagrafo">
+                    6 colheres de sopa de açúcar <br>
+                    1 lata de leite condensado <br>
+                    1 lata de leite, use a mesma medida do leite condensado <br>
+                    3 ovos <br>
+                    <br>
+                    <h2>Onde encontrar os ingredientes? </h2>
+                    <p>Destinamos o maps para busca de supermercados próximos</p>
+                </p>
+            </div>
+            <div id="googleMap" class="w3-round-large w3-greyscale" style="width:100%;height:400px;"></div>
+            <!-- /Add Google Maps -->
+          
+          
+          
+            <script>
+              function myMap() {
+                // Aqui é coloquei a localização por coordenadas (por numeros) usei o link para consultar: http://www.mapcoordinates.net/pt para obtelas
+                myCenter = new google.maps.LatLng(-19.97621248, -403.97750974);
+                var mapOptions = {
+                  center: myCenter,
+                  zoom: 9, scrollwheel: false, draggable: false,
+                  mapTypeId: google.maps.MapTypeId.ROADMAP
+                };
+                var map = new google.maps.Map(document.getElementById("googleMap"), mapOptions);
+                var marker = new google.maps.Marker({
+                  position: myCenter,
+                });
+                marker.setMap(map);
+              }
+            </script>
+          
+            <script
+              src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAhGm54wZN66gyk9MdQF1xLs6RY-WGumRU&callback=myMap"></script>
+            <button id="back-to-top" class="botaoVoltar">&#8679;</button>
+            <script>
+                var btn = document.querySelector("#back-to-top");
+                btn.addEventListener("click", function () {
+                    window.scrollTo(0, 0);
+                });
+            </script>
+        </section>
+    </main>
+
+    <!--Onde achar os ingredientes : coloca a API aqui, com titulo e tudo bonitinho-->
+
+</body>
+
+</html>
